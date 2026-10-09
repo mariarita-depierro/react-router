@@ -5,6 +5,7 @@ import DefaultLayout from "./components/layouts/DefaultLayout";
 import HomePage from "./components/pages/HomePage";
 import ProductsPage from "./components/pages/ProductsPage";
 import AboutUsPage from "./components/pages/AboutUsPage";
+import SingleProduct from "./components/pages/SingleProduct";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route element={<DefaultLayout />}>
           <Route path="/" element={<HomePage />} />
           <Route path="/products" element={<ProductsPage />} />
+          <Route path="/products/:id" element={<SingleProduct />} />
           <Route path="/about-us" element={<AboutUsPage />} />
         </Route>
       </Routes>

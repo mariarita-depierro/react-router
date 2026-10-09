@@ -1,18 +1,21 @@
 import { Link } from "react-router";
-import { ShoppingCart } from "lucide-react";
 import Navbar from "../ui/Navbar";
+import logo from "../../assets/logo-beauty-glam.jpg";
 
 export default function HeaderLayout() {
   return (
     <header className="bg-red-300 p-4 ">
-      <Link className="uppercase" to="/">
-        <div className="flex gap-2 justify-center">
-          <h1>My E-commerce</h1>
-          <span>
-            <ShoppingCart />
-          </span>{" "}
-        </div>
-      </Link>
+      <div className="flex gap-2 uppercase">
+        <Link to="/">
+          <img
+            className="w-70 h-40 rounded"
+            src={logo}
+            alt="logo beauty-glam"
+          />
+        </Link>
+        <h1 className="text-lg font-semibold">Nuove Collezioni Disponibili!</h1>
+      </div>
+
       <Navbar />
     </header>
   );
