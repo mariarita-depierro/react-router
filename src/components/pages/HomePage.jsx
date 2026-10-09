@@ -1,12 +1,17 @@
-import { Home } from "lucide-react";
+import productsHomepage from "../../assets/products-homepage.jpg";
 
 export default function HomePage() {
   return (
-    <section>
-      <h1>
-        E-commerce Home <Home />
-      </h1>
-      <p>Benvenuti nel nostro e-shop!</p>
+    <section className="flex justify-center text-center mt-2">
+      <div>
+        {" "}
+        <h2>Benvenuti nel nostro e-shop!</h2>
+        <img
+          className="m-2 w-100"
+          src={productsHomepage}
+          alt="prodotti homepage"
+        />
+      </div>
     </section>
   );
 }
