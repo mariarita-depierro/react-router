@@ -1,9 +1,32 @@
-import { ShoppingCart } from "lucide-react";
+import { useEffect, useState } from "react";
+import Card from "../ui/Card";
 
 export default function ProductsPage() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    async function handleFetchProducts() {
+      const response = await fetch("https://dummyjson.com/products?limit=10");
+      const data = await response.json();
+      console.log(data);
+      setProducts(data.products);
+    }
+    handleFetchProducts();
+  }, []);
+
   return (
-    <div>
-      Products <ShoppingCart />
-    </div>
+    <section>
+      <h2 className="mt-2 ms-2">Products</h2>
+      <div className="grid grid-cols-5 m-4 gap-2">
+        {products.map((prod) => (
+          <Card
+            key={prod.id}
+            title={prod.title}
+            image={prod.images}
+            price={prod.price}
+          />
+        ))}
+      </div>
+    </section>
   );
 }

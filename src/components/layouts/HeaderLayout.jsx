@@ -1,6 +1,6 @@
-import { Link, NavLink } from "react-router";
-import { navLink } from "../../lib/vars";
+import { Link } from "react-router";
 import { ShoppingCart } from "lucide-react";
+import Navbar from "../ui/Navbar";
 
 export default function HeaderLayout() {
   return (
@@ -13,20 +13,7 @@ export default function HeaderLayout() {
           </span>{" "}
         </div>
       </Link>
-      <nav>
-        <ul className="flex gap-2 justify-end uppercase">
-          {navLink.map((item) => (
-            <li key={item.path}>
-              <NavLink
-                className={({ isActive }) => (isActive ? "font-bold" : "")}
-                to={item.path}
-              >
-                {item.label}
-              </NavLink>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      <Navbar />
     </header>
   );
 }
