@@ -22,7 +22,11 @@ export default function SingleProduct() {
         <>
           <div className="flex flex-col text-center ">
             <h2 className="font-bold uppercase">{product.title}</h2>
-            <img className="w-90" src={product.thumbnail} alt={product.title} />
+            <img
+              className="w-90 self-center"
+              src={product.thumbnail}
+              alt={product.title}
+            />
           </div>
           <div className="flex flex-col gap-y-1">
             <h3>
@@ -36,7 +40,7 @@ export default function SingleProduct() {
               <strong>Stock:</strong> {product.stock}
             </p>
             <span className="text-red-400">#{product.category}</span>
-            <button className="flex gap-2 p-2 p w-20 border rounded-lg">
+            <button className="flex self-center gap-2 p-2 p w-20 border rounded-lg">
               Add
               <ShoppingCart />
             </button>

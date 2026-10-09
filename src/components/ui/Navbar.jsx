@@ -3,8 +3,8 @@ import { navLink } from "../../lib/vars";
 
 export default function Navbar() {
   return (
-    <nav>
-      <ul className="flex gap-2 justify-end uppercase">
+    <nav className="self-end justify-self-end">
+      <ul className="flex gap-3">
         {navLink.map((item) => (
           <li key={item.path}>
             <NavLink

@@ -16,9 +16,7 @@ export default function ProductsPage() {
 
   return (
     <section>
-      <h2 className="mt-2 ms-2">Products</h2>
-
-      <div className="grid grid-cols-5 m-4 gap-2">
+      <div className="grid grid-cols-5 m-5 gap-2">
         {products.map((prod) => (
           <Card
             key={prod.id}
