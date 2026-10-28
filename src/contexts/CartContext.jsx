@@ -12,6 +12,10 @@ export function CartContextProvider({ children }) {
 
   const totalCartProds = cartProducts.length;
 
+  const totalPriceCartProds = cartProducts.reduce((acc, item) => {
+    return acc + item.price;
+  }, 0);
+
   function handleAddCartProd(prod) {
     console.log(prod);
 
@@ -19,7 +23,14 @@ export function CartContextProvider({ children }) {
   }
 
   return (
-    <CartContext value={{ cartProducts, totalCartProds, handleAddCartProd }}>
+    <CartContext
+      value={{
+        cartProducts,
+        totalCartProds,
+        handleAddCartProd,
+        totalPriceCartProds,
+      }}
+    >
       {children}
     </CartContext>
   );

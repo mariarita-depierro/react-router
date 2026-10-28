@@ -1,11 +1,12 @@
 import { ShoppingCart } from "lucide-react";
 import { useCartContext } from "../../contexts/CartContext";
+import { NavLink } from "react-router";
 
 export default function Cart() {
   const { totalCartProds } = useCartContext();
 
   return (
-    <div className="relative">
+    <NavLink to="/cart" className="relative">
       <div className="absolute top-25 right-5">
         <ShoppingCart></ShoppingCart>
       </div>
@@ -14,6 +15,6 @@ export default function Cart() {
           {totalCartProds}
         </span>
       </div>
-    </div>
+    </NavLink>
   );
 }

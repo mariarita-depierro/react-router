@@ -57,7 +57,7 @@ export default function SingleProduct() {
               </h3>
               <p>{product.description}</p>
               <span>
-                <strong>Prezzo:</strong> {product.price}€
+                <strong>Price:</strong> {product.price} €
               </span>
               <p>
                 <strong>Stock:</strong> {product.stock}
