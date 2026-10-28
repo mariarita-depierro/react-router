@@ -60,7 +60,7 @@ export default function SingleProduct() {
                 <strong>Stock:</strong> {product.stock}
               </p>
               <span className="text-red-400">#{product.category}</span>
-              <button className="flex self-center gap-2 p-2 p w-20 border rounded-lg">
+              <button className="flex self-center gap-2 p-2 p w-20 border rounded-lg cursor-pointer">
                 Add
                 <ShoppingCart />
               </button>

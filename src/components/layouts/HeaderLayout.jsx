@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import Navbar from "../ui/Navbar";
 import logo from "../../assets/logo-beauty-glam.jpg";
+import Cart from "../ui/Cart";
 
 export default function HeaderLayout() {
   return (
@@ -11,7 +12,10 @@ export default function HeaderLayout() {
       <h1 className="text-2xl font-semibold italic self-center">
         Nuove Collezioni Disponibili!
       </h1>
-      <Navbar />
+      <div className="flex justify-end">
+        <Cart></Cart>
+        <Navbar />
+      </div>
     </header>
   );
 }

@@ -55,3 +55,5 @@ Bonus
 - Aggiungiamo una navigazione programmatica che riporti alla pagina di archivio prodotti se viene cercato un prodotto che non esiste;
 - Aggiungiamo un loading per caricamento dati nelle pagine dell'archivio e dettaglio prodotti.
 - Gestiamo la classe active per i link di navigazione nell'header */
+
+/* Aggiungere al vostro esercizio (React Router Store) uno state globale che tenga traccia dei prodotti aggiunti al carrello e che mostri il totale degli elementi aggiunti attraverso un componente da inserire nell'header. */
