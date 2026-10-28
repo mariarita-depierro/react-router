@@ -2,8 +2,11 @@ import { ShoppingCart } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router";
 import Spinner from "../ui/Spinner";
+import { useCartContext } from "../../contexts/CartContext";
 
 export default function SingleProduct() {
+  const { handleAddCartProd } = useCartContext();
+
   const [product, setProduct] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
@@ -60,7 +63,10 @@ export default function SingleProduct() {
                 <strong>Stock:</strong> {product.stock}
               </p>
               <span className="text-red-400">#{product.category}</span>
-              <button className="flex self-center gap-2 p-2 p w-20 border rounded-lg cursor-pointer">
+              <button
+                onClick={() => handleAddCartProd(product)}
+                className="flex self-center gap-2 p-2 p w-20 border rounded-lg cursor-pointer"
+              >
                 Add
                 <ShoppingCart />
               </button>
